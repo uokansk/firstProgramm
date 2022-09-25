@@ -10,17 +10,17 @@
 // ========================================================
 
 
-int[] array = {1, 2, 4, 15, 5, 4, 7, 8, 9};
+int[] array = {1, 2, 9, 15, 5, 4, 7, 8, 9};
 int n = array.Length;   // определить длину массива .Length
 int index = 0;
-int find = 4;
+int find = 9;
 
 while (index < n)
 {
     if (array[index] == find)
     {
         Console.WriteLine(index);
-        break;                    // остановить цикл
+        // break;                    // остановить цикл
     }
     index ++;
 }

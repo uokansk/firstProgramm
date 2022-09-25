@@ -8,7 +8,7 @@
 
 // массив
 
-int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int[] array = { 1, 2, 3, 4, 511, 6, 7, 8, 9 };
 array[0] = 55;
 
 int maxAll = Max(Max(array[0], array[1], array[2]), 
@@ -16,3 +16,4 @@ int maxAll = Max(Max(array[0], array[1], array[2]),
                  Max(array[6], array[7], array[8]));
 
 Console.WriteLine(maxAll);
+// Console.WriteLine(array[4]);

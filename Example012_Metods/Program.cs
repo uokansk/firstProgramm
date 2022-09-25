@@ -75,14 +75,15 @@ string Metod4(int count, string text)
     return result;
 }
 string res = Metod4(5, "Привет, ");
+
 // Console.WriteLine(res);
 
-
+// таблица умножения
 // for (int i = 2; i < 10; i++)
 // {
 //     for (int j = 2; j < 10; j++)
 //     {
-//         Console.WriteLine($"{i} x {j} = {i*j}");
+//         Console.WriteLine($"{i} x {j} = {i*j}");  //интерполяция строк
 //     }
 //     Console.WriteLine();
 // }
@@ -91,10 +92,12 @@ string res = Metod4(5, "Привет, ");
 // Дан текст. В нём нужно все пробелы заменить чёрточками, маленькие буквы «к»
 // заменить большими «К», а большие «С» заменить на маленькие «с».
 
-string text = "— Я думаю, — сказал князь, улыбаясь, — что,"
-            + "ежели бы вас послали вместо нашего милого Винценгероде,"
-            + "вы бы взяли приступом согласие прусского короля."
-            + "Вы так красноречивы. Вы дадите мне чаю?";
+string text =
+    "— Я думаю, — сказал князь, улыбаясь, — что,"
+    + "ежели бы вас послали вместо нашего милого Винценгероде,"
+    + "вы бы взяли приступом согласие прусского короля."
+    + "Вы так красноречивы. Вы дадите мне чаю?";
+
 // string s = "qwerty"
 //             012
 // s[3]
@@ -104,17 +107,19 @@ string Replase(string text, char oldValue, char newValue)
     int length = text.Length;
     for (int i = 0; i < length; i++)
     {
-        if (text[i]== oldValue) result=result + $"{newValue}";
-        else result=result + $"{text[i]}";
+        if (text[i] == oldValue)
+            result = result + $"{newValue}";
+        else
+            result = result + $"{text[i]}";
     }
     return result;
 }
 
-string newText = Replase(text, ' ', '-');
+string newText = Replase(text, ' ', '|');
 Console.WriteLine(newText);
 Console.WriteLine();
 string newText2 = Replase(newText, 'к', 'К');
 Console.WriteLine(newText2);
 Console.WriteLine();
-string newText3 = Replase(newText2, 'С', 'с');
+string newText3 = Replase(newText2, 'с', 'С');
 Console.WriteLine(newText3);
